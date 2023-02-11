@@ -1,24 +1,19 @@
-import java.util.Scanner;
-
 public class Student {
-    Scanner sc;
     String name;
-    int age;
-    int xp;
-    private int height;
-    void rest() {
-        xp+=20;
+    String surname;
+    private int age;
+    public int getAge() {
+        return age;
     }
-    void learning() {
-        xp+=100;
+    public static void relax() {
+        System.out.println("I'm Relaxing!");
     }
-    public int getHeight() {
-        return height;
+    public static void study() {
+        System.out.println("I'm Studying!");
     }
-    void Student() {
-        name = sc.nextLine();
-        age = (int) (Math.random()*5+16);
-        height = (int) (Math.random()*50+110);
-        xp = 0;
+    public Student(String name, String surname, int age) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
     }
 }
