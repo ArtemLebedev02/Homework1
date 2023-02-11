@@ -1,36 +1,28 @@
-import java.util.Scanner;
 
 public class Tutor {
-    Scanner sc;
-    String name;
-    int age;
-    private int height;
-    protected Student[] students;
-    public Tutor(Student[] students) {
+    static Student[] students = new Student[6];
+    public void SetStudent(Student[] students) {
         Tutor.students = students;
     }
-    public void Tutor() {
-        name = sc.nextLine();
-        age = (int) (Math.random() * 5 + 22);
-        height = (int) (Math.random() * 50 + 110);
-        Student.Student();
+    static String Tutorname;
+    static String Tutorsurname;
+    static int Tutorage;
+    public static void printStudentsInfo() {
+        for (int i = 0; i < students.length; i++) {
+            System.out.println("Name: " + students[i].name);
+            System.out.println("Surname: " + students[i].surname);
+            System.out.println("Age: " + students[i].getAge());
     }
-    public int getHeight() {
-        return height;
+}
+    public static void Class() {
+        Student.study();
+        Student.relax();
     }
-    public Student[] getStud() {
-        return students;
+    public Tutor(String Tutorname, String Tutorsurname, int Tutorage) {
+        Tutor.Tutorname = Tutorname;
+        Tutor.Tutorsurname = Tutorsurname;
+        Tutor.Tutorage = Tutorage;
     }
-    public void printStudentsInfo() {
-        for (Student student : students) {
-            System.out.println("Name: " + Student.name + ", Age: " + Student.age + ", Height: " + Student.getHeight());
-        }
-    }
-    public void Class() {
-        for (Student student : students) {
-            Student.learning();
-            Student.rest();
-        }
-    }
+
 }
 
