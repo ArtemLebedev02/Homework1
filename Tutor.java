@@ -1,13 +1,13 @@
 
 public class Tutor {
-    static Student[] students = new Student[6];
-    public void SetStudent(Student[] students) {
-        Tutor.students = students;
-    }
+    Student[] students = new Student[6];
     static String Tutorname;
     static String Tutorsurname;
     static int Tutorage;
-    public static void printStudentsInfo() {
+    public void SetStudents(Student[] students) {
+        this.students = students;
+    }
+    public void printStudentsInfo() {
         for (int i = 0; i < students.length; i++) {
             System.out.println("Name: " + students[i].name);
             System.out.println("Surname: " + students[i].surname);
